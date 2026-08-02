@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathdraw-studio"
+version = "0.2.1"
+description = "Desktop GUI and CLI that convert images into vector, Fourier, or 2D DCT mathematical drawing equations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Shajib Ghosh"}]
+keywords = ["image-to-equation", "computer-vision", "fourier-descriptors", "discrete-cosine-transform", "bezier-curves", "mathematical-art", "tkinter"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Win32 (MS Windows)",
+  "Environment :: X11 Applications",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Scientific/Engineering :: Image Processing",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+  "numpy>=1.26",
+  "Pillow>=10.3",
+  "opencv-python>=4.10",
+  "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+formats = [
+  "PyMuPDF>=1.24",
+  "pillow-heif>=0.18",
+  "CairoSVG>=2.7",
+  "rawpy>=0.21",
+]
+documents = ["pypandoc-binary>=1.15"]
+dev = ["pytest>=8.2", "ruff>=0.6"]
+
+[project.scripts]
+mathdraw = "mathdraw.cli:main"
+mathdraw-gui = "mathdraw.gui:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"

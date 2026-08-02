@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use MathDraw Studio in research, teaching, or a published technical workflow, please cite the software."
+title: "MathDraw Studio"
+type: software
+authors:
+  - family-names: "Ghosh"
+    given-names: "Shajib"
+version: "0.2.1"
+date-released: "2026-08-02"
+license: MIT
+abstract: >-
+  MathDraw Studio is a desktop and command-line application that converts
+  images into finite mathematical representations using geometric primitives,
+  piecewise cubic Bézier curves, Fourier contour descriptors, and
+  two-dimensional discrete cosine transforms.
+keywords:
+  - image-to-equation
+  - computer vision
+  - Fourier descriptors
+  - discrete cosine transform
+  - Bézier curves
+  - mathematical visualization

@@ -1,0 +1,16 @@
+name: mathdraw-studio
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pillow
+  - opencv
+  - scipy
+  - pandoc
+  - tectonic
+  - pip
+  - pip:
+      - PyMuPDF>=1.24
+      - pillow-heif>=0.18
+      - CairoSVG>=2.7

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+mathdraw_output/
+demo_output/
+
+# Distribution and release artifacts
+build/
+dist/
+*.egg-info/
+.release/

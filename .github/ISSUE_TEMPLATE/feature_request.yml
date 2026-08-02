@@ -1,0 +1,28 @@
+name: Feature request
+description: Propose a new mathematical representation, detector, export, or workflow improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: State the use case and why the existing modes are insufficient.
+    validations:
+      required: true
+  - type: textarea
+    id: basis
+    attributes:
+      label: Mathematical or technical basis
+      description: Identify the proposed representation, assumptions, and expected fidelity.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed implementation
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation criteria
+      description: Describe measurable correctness, reconstruction, performance, and export criteria.

@@ -1,0 +1,20 @@
+MathDraw Studio equation export
+mode = hybrid_vector
+canvas = 640 x 480
+coordinates = normalized_cartesian
+
+[line_1]  0 <= t <= 1
+x(t) = -0.75 + (1.5) t
+y(t) = -0.4375 + (0) t
+
+[circle_1]  0 <= t < 2*pi
+x(t) = 0 + (0.28125) cos(t)
+y(t) = 0.125 + (-0.28125) sin(t)
+
+[bezier_path_1: sample organic contour]
+segment 1, 0 <= t <= 1
+x(t) = (1-t)^3(-0.4375)+3(1-t)^2t(-0.3125)+3(1-t)t^2(0.3125)+t^3(0.4375)
+y(t) = (1-t)^3(-0.1875)+3(1-t)^2t(0.375)+3(1-t)t^2(0.375)+t^3(-0.1875)
+segment 2, 0 <= t <= 1
+x(t) = (1-t)^3(0.4375)+3(1-t)^2t(0.21875)+3(1-t)t^2(-0.21875)+t^3(-0.4375)
+y(t) = (1-t)^3(-0.1875)+3(1-t)^2t(-0.3125)+3(1-t)t^2(-0.3125)+t^3(-0.1875)

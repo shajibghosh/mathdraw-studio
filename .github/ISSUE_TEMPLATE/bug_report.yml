@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible defect in processing, reconstruction, GUI behavior, or export.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Remove confidential content from sample files and logs before submission."
+  - type: input
+    id: version
+    attributes:
+      label: MathDraw Studio version
+      placeholder: "0.2.1"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and Python version
+      placeholder: "Windows 11, Python 3.11.9"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Representation mode
+      options:
+        - Automatic
+        - Hybrid vector
+        - Fourier contour
+        - 2D DCT image
+        - Not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Include settings, commands, and a minimal non-confidential input when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Complete error or traceback
+      render: shell
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
